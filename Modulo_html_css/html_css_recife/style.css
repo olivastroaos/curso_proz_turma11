@@ -1,6 +1,50 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    
+    margin: 0;
+    padding: 0;    
 }
 
+header {
+    background-color: rgb(93, 29, 231);
+    padding: 16px;
+    color: white;
+}
+
+main {
+    background-color: orange;
+    padding: 16px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    color: white;   
+}
+
+.pontos {
+    display: list-item;
+    color: white; 
+}
+
+a {
+    color: white;
+}
+
+footer {
+    background-color: rgb(93, 29, 231);
+    padding: 16px;
+    color: white;
+}
+
+.fotos {
+    text-align: center;
+}
+
+.voltar {
+    text-align: right;
+ }
+
+ voltar2 {
+    text-decoration: none;
+ }
