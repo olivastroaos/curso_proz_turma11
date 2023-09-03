@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+Select
+
+    C.Obj,
+
+    E.Partper,
+
+    E.product_individual,
+
+    'CHASSIS' as PRU,
+
+    SUM(C.Quantity)
+
+From mona_sla_ma_chassis.cides C
+
+inner join mona_sla_ma_chassis.ipo I
+
+    on C.Ciid = I.Ciid
+
+inner join mona_sla_ma_chassis.epo E
+
+    on E.Epoid = I.Eposurp
+
+Where E.Partper IN (select max(ep.partper) from mona_sla_ma_chassis.epo ep)
+
+    And C.Too = 'A'
+
+    And C.totask = 'A'
+
+    And C.mtrlcalc = 'Y'
+
+GROUP by C.obj, E.Partper, E.product_individual
